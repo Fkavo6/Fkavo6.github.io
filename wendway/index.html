@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wendway: One Line Puzzle</title>
+<meta name="description" content="Wendway is a one-line puzzle game for iPhone. Drag one line through every open tile, once. 150 levels in 5 worlds.">
+<style>
+:root {
+  --paper: #F3EDE2;
+  --ink: #1F2430;
+  --muted: #6B6558;
+  --tile: #E4DBCB;
+  --accent: #E4572E;
+  --link: #9A3212;
+  --w1: #E4572E;
+  --w2: #17807E;
+  --w3: #D9A21B;
+  --w4: #3D4EAE;
+  --w5: #8E3B6D;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+header {
+  border-bottom: 4px solid var(--accent);
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+h1, h2 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0 0 4px;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0.5rem;
+}
+p { margin: 0.6rem 0; }
+.tagline {
+  font-size: 1.2rem;
+  margin: 0 0 16px;
+}
+.muted { color: var(--muted); }
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  margin: 6px 8px 6px 0;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn.primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+ol.worlds {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ol.worlds li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--tile);
+}
+.swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex: none;
+}
+.w1 { background: var(--w1); }
+.w2 { background: var(--w2); }
+.w3 { background: var(--w3); }
+.w4 { background: var(--w4); }
+.w5 { background: var(--w5); }
+.world-name {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+}
+footer {
+  border-top: 1px solid var(--tile);
+  margin-top: 2.5rem;
+  padding: 1.25rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-right: 12px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Wendway</h1>
+    <p class="tagline">A one-line puzzle game for iPhone.</p>
+  </header>
+
+  <main>
+    <p>Start on the dot. Drag one continuous line so it covers every open tile exactly once. Each puzzle is a small grid, and the rules change as you go.</p>
+
+    <h2>150 levels in 5 worlds</h2>
+    <p class="muted">Each world has 30 levels and adds one new rule.</p>
+    <ol class="worlds">
+      <li><span class="swatch w1" aria-hidden="true"></span><span><span class="world-name">1. Paper</span>: some tiles are missing (gaps).</span></li>
+      <li><span class="swatch w2" aria-hidden="true"></span><span><span class="world-name">2. Hedge</span>: walls stand between some tiles.</span></li>
+      <li><span class="swatch w3" aria-hidden="true"></span><span><span class="world-name">3. Harbor</span>: the line must end on the flag.</span></li>
+      <li><span class="swatch w4" aria-hidden="true"></span><span><span class="world-name">4. Current</span>: some tiles are one-way, shown by arrows.</span></li>
+      <li><span class="swatch w5" aria-hidden="true"></span><span><span class="world-name">5. Lantern</span>: warp tiles jump the line to their twin.</span></li>
+    </ol>
+
+    <h2>Stuck?</h2>
+    <p>You start with 3 hints. A hint shows the next few correct steps. You can get more hints in the shop, or by watching a short ad.</p>
+
+    <h2>Ads and purchases</h2>
+    <p>Wendway is free to play. Full-screen ads appear between some levels. A one-time purchase called Remove Ads turns those off. Hint packs are also sold in the shop. Purchases are handled by Apple.</p>
+
+    <h2>Get the game</h2>
+    <!-- APP STORE LINK: once the App Store page exists, replace the next paragraph with
+         <p><a class="btn primary" href="THE APP STORE LINK">Get Wendway on the App Store</a></p> -->
+    <p><strong>Coming soon to the App Store.</strong></p>
+    <p class="muted">Wendway is made for iPhone (iOS 17 or later).</p>
+  </main>
+
+  <footer>
+    <p>Wendway is published by Dune Water Studio LLC.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="support.html#report-ad">Report an ad</a>
+    </p>
+  </footer>
+</div>
+</body>
+</html>
